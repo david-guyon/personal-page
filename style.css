@@ -1,5 +1,16 @@
 #topBar {
 	height: 200px;
 	width: 100%;
-	background-color: 111111;
+	margin: 0;
+	background-color: #111111;
+	border-bottom: 2px solid #30A63D;
+}
+
+#topBar #content {
+	width: 800px;
+	margin: 0 auto;
+}
+
+#topBar h1 {
+	margin: 0;
 }
