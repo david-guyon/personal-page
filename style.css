@@ -21,16 +21,35 @@
   font-style: normal;
 }
 
+/*
+ * General
+ */
 body {
 	background-color: #FBFAF7;
 }
 
+ul {
+	list-style-type:none;
+	margin: 0;
+}
+
+li {
+	display: inline-block;
+}
+
+/*
+ * Header
+ */
 header {
 	height: 200px;
 	width: 100%;
 	margin: 0;
 	background-color: #111111;
 	border-bottom: 2px solid #30A63D;
+	-webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+	   -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+		 -o-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+			box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
 }
 
 header #headerContent {
@@ -74,12 +93,15 @@ header p {
 	line-height: 140%;
 }
 
+/*
+ * Content and boxes
+ */
 #bodyContent {
 	width: 800px;
 	margin: 0 auto;
 }
 
-#who {
+#who, #where {
 	float: left;
 	margin-top: 20px;
 	width: 400px;
@@ -87,7 +109,7 @@ header p {
 	box-shadow: 3px 3px 8px #888;
 }
 
-#who h2 {
+#who h2, #where h2 {
 	width: 390px;
 	margin-top: 0;
 	padding-top: 4px;
