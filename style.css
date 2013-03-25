@@ -28,13 +28,26 @@ body {
 	background-color: #FBFAF7;
 }
 
+h2 {
+	color: #fff;
+	margin-top: 0;
+	font-size: 30px;
+	padding-top: 4px;
+	padding-left: 10px;
+	font-weight: normal;
+	font-family: "Existence", Arial;
+	background-color: rgba(255,255,255,0.5);
+}
+
 ul {
 	list-style-type:none;
-	margin: 0;
+	text-align: center;
+	margin: 0 0 10px 0;
 }
 
 li {
 	display: inline-block;
+	margin: 2px 5px;
 }
 
 /*
@@ -54,7 +67,7 @@ header {
 
 header #headerContent {
 	position: relative;
-	width: 800px;
+	width: 750px;
 	margin: 0 auto;
 	padding-top: 20px;
 }
@@ -75,52 +88,44 @@ header #rightToImage {
 }
 
 header h1 {
-	font-family: "Existence", Arial;
-	font-size: 48px;
-	font-weight: normal;
-	color: #999;
 	margin: 0;
+	color: #999;
+	font-size: 48px;
 	margin-left: 10px;
+	font-weight: normal;
+	font-family: "Existence", Arial;
 }
 
 header p {
-	font-family: "Junction", Arial;
-	font-size: 16px;
 	color: #ddd;
-	margin-left: 15px;
+	font-size: 16px;
 	margin-top: 20px;
+	margin-left: 15px;
 	text-indent: 20px;
 	line-height: 140%;
+	font-family: "Junction", Arial;
 }
 
 /*
  * Content and boxes
  */
 #bodyContent {
-	width: 800px;
+	width: 750px;
 	margin: 0 auto;
 }
 
 #who, #where {
 	float: left;
-	margin-top: 20px;
 	width: 400px;
+	margin-top: 20px;
 	background-color: #666;
 	box-shadow: 3px 3px 8px #888;
 }
 
 #who h2, #where h2 {
 	width: 390px;
-	margin-top: 0;
-	padding-top: 4px;
-	padding-left: 10px;
-	background-color: rgba(255,255,255,0.5);
-	color: #fff;
-	font-family: "Existence", Arial;
-	font-size: 30px;
-	font-weight: normal;
-/*	box-shadow: 1px 4px 6px #666;
-*/}
+	/* box-shadow: 1px 4px 6px #666; */
+}
 
 #who p {
 	color: #ddd;
@@ -128,4 +133,29 @@ header p {
 	text-indent: 20px;
 	text-align: justify;
 	font-family: "Junction", Arial;
+}
+
+#where #linkContainer {
+	display: none;
+	margin-top: 10px;
+	padding: 3px 5px;
+	background-color: rgba(255,255,255,0.2);
+}
+
+#where #linkContainer a {
+	color: #FFF;
+}
+
+#website {
+	float: right;
+	margin-top: 20px;
+	position: relative;
+	box-shadow: 3px 3px 8px #888;
+}
+
+#website h2 {
+	top: 0;
+	left: 0;
+	width: 247px;
+	position: absolute;
 }
