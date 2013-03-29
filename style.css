@@ -150,12 +150,14 @@ header p {
 
 	#where #linkContainer {
 		display: none;
+		height: 0;
 		margin-top: 10px;
 		padding: 3px 5px;
-		background-color: rgba(255,255,255,0.2);
+		background-color: rgba(255,255,255,0.08);
 	}
 
 	#where #linkContainer a {
+		display: none;
 		color: #FFF;
 	}
 
