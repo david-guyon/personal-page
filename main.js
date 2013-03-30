@@ -3,6 +3,7 @@ $(function(){
 	handleWhoBox();
 	handleWebsiteBox();
 	handleBlogBox();
+	handleProjectsBox();
 });
 
 function handleWhereBox() {
@@ -69,4 +70,31 @@ function handleBlogBox() {
 	$("#blog").click(function() {
 		window.open("http://blog.songaccoustic.fr", '_blank').focus();
 	});
+}
+
+function handleProjectsBox() {
+	$("#projects").click(function() {
+		hideWhoBox(1000);
+		hideWebsiteBox(1000);
+		setTimeout(function() {
+			hideWhereBox(1000);
+			hideBlogBox(1000);
+		}, 600);
+	});
+}
+
+function hideWhoBox(duration) {
+	$("#who").hide("blind", duration);
+}
+
+function hideWebsiteBox(duration) {
+	$("#website").hide("blind", duration);
+}
+
+function hideWhereBox(duration) {
+	$("#where").hide("blind", duration);
+}
+
+function hideBlogBox(duration) {
+	$("#blog").hide("blind", duration);
 }
