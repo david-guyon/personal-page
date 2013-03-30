@@ -1,5 +1,6 @@
 $(function(){
 	handleWhereBox();
+	handleWhoBox();
 });
 
 function handleWhereBox() {
@@ -7,30 +8,51 @@ function handleWhereBox() {
 		$("#linkContainer").show();
 		$("#linkContainer").animate({
 			height: "20px"
-		}, 300);
+		}, 200);
 		setTimeout(function() {
 			$("#where #linkContainer a").show();
-		}, 300);
+		}, 200);
 	}).mouseleave(function() {
 		$("#where #linkContainer a").hide();
 		$("#linkContainer").animate({
 			height: "0px"
-		}, 200);
+		}, 300);
 		setTimeout(function() {
 			$("#linkContainer").hide();
-		}, 200);
+		}, 300);
 	});
 
 	$("#where li").mouseover(function(e) {
 		console.log(e.target.alt);
 		switch(e.target.alt) {
 			case "Facebook logo":
-				console.log("Genre");
-				$("#linkContainer a").val("GENNRE FB toussa");
+				$("#linkContainer a").html("Facebook/GuyonDavid");
+				$("#linkContainer a").attr("href", "https://www.facebook.com/GuyonDavid");
+			break;
+			case "Google+ logo":
+				$("#linkContainer a").html("Google+/GuyonDavid");
+				$("#linkContainer a").attr("href", "https://plus.google.com/118272748818799969626");
+			break;
+			case "Twitter logo":
+				$("#linkContainer a").html("Twitter/DGeTuX");
+				$("#linkContainer a").attr("href", "https://twitter.com/dgetux");
+			break;
+			case "Youtube logo":
+				$("#linkContainer a").html("Youtube/misterchimizz");
+				$("#linkContainer a").attr("href", "http://www.youtube.com/user/misterchimizz");
+			break;
+			case "Last.fm logo":
+				$("#linkContainer a").html("Lastfm/misterchimiz");
+				$("#linkContainer a").attr("href", "http://www.lastfm.fr/user/misterchimiz");
 			break;
 			default:
-				console.log("default");
-				$("#linkContainer a").val("Le FUU");
+				$("#linkContainer a").html("O_o'");
 		}
+	});
+}
+
+function handleWhoBox() {
+	$("#who a").click(function() {
+		$("#who a").html("Soon..");
 	});
 }
