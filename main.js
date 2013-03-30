@@ -15,45 +15,27 @@ $(function(){
 });
 
 function handleWhereBox() {
-	$("#where").mouseenter(function() {
-		$("#linkContainer").show();
-		$("#linkContainer").animate({
-			height: "20px"
-		}, 200);
-		setTimeout(function() {
-			$("#where #linkContainer a").show();
-		}, 200);
-	}).mouseleave(function() {
-		$("#where #linkContainer a").hide();
-		$("#linkContainer").animate({
-			height: "0px"
-		}, 300);
-		setTimeout(function() {
-			$("#linkContainer").hide();
-		}, 300);
-	});
-
 	$("#where li").mouseover(function(e) {
 		console.log(e.target.alt);
 		switch(e.target.alt) {
 			case "Facebook logo":
-				$("#linkContainer a").html("Facebook/GuyonDavid");
+				$("#linkContainer a").html("Mon mur Facebook");
 				$("#linkContainer a").attr("href", "https://www.facebook.com/GuyonDavid");
 			break;
 			case "Google+ logo":
-				$("#linkContainer a").html("Google+/GuyonDavid");
+				$("#linkContainer a").html("Ma page Google plus");
 				$("#linkContainer a").attr("href", "https://plus.google.com/118272748818799969626");
 			break;
 			case "Twitter logo":
-				$("#linkContainer a").html("Twitter/DGeTuX");
+				$("#linkContainer a").html("Mon compte Twitter");
 				$("#linkContainer a").attr("href", "https://twitter.com/dgetux");
 			break;
 			case "Youtube logo":
-				$("#linkContainer a").html("Youtube/misterchimizz");
+				$("#linkContainer a").html("Ma chaîne Youtube");
 				$("#linkContainer a").attr("href", "http://www.youtube.com/user/misterchimizz");
 			break;
 			case "Last.fm logo":
-				$("#linkContainer a").html("Lastfm/misterchimiz");
+				$("#linkContainer a").html("Mon compte Last.fm");
 				$("#linkContainer a").attr("href", "http://www.lastfm.fr/user/misterchimiz");
 			break;
 			default:

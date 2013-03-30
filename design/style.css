@@ -121,6 +121,18 @@ header p {
 	font-family: "Junction", Arial;
 }
 
+header a {
+	float: right;
+	margin-top: 20px;
+	font-family: "Junction", Arial;
+	font-size: 15px;
+}
+
+header a:hover {
+	text-decoration: none;
+	color: #39ADE6;
+}
+
 /*
  * Content and boxes
  */
@@ -170,19 +182,26 @@ header p {
 		text-indent: 20px;
 		text-align: justify;
 		font-family: "Junction", Arial;
+		font-size: 15px;
+	}
+
+	#who a, #where #linkContainer a {
+		color: #67BCE6;
+	}
+
+	#who a:hover, #where #linkContainer a:hover {
+		text-decoration: none;
+		color: #39ADE6;
 	}
 
 	#where #linkContainer {
-		display: none;
-		height: 0;
 		margin-top: 10px;
 		padding: 3px 5px;
-		background-color: rgba(255,255,255,0.08);
 	}
 
 	#where #linkContainer a {
-		display: none;
-		color: #FFF;
+		font-family: "Junction", Arial;
+		font-size: 14px;
 	}
 
 	/*
