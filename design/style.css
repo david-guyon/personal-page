@@ -28,6 +28,11 @@ body {
 	background-color: #FBFAF7;
 }
 
+.clearer {
+	clear: both;
+	margin-bottom: 50px;
+}
+
 h2 {
 	color: #fff;
 	margin-top: 0;
@@ -125,7 +130,7 @@ header p {
 }
 
 /* Shadow for all boxes (with hover handling) */
-#who, #where, #website, #blog, #projects {
+#who, #where, #website, #blog, #projects, #projectsList div {
 	box-shadow: 3px 3px 8px #888;
 	-webkit-transition: all 0.2s linear;
 	   -moz-transition: all 0.2s linear;
@@ -133,7 +138,7 @@ header p {
 			transition: all 0.2s linear;
 }
 
-#who:hover, #where:hover, #website:hover, #blog:hover, #projects:hover {
+#who:hover, #where:hover, #website:hover, #blog:hover, #projects:hover, #projectsList div:hover {
 	box-shadow: 2px 2px 6px #222;
 }
 	/*
@@ -231,5 +236,55 @@ header p {
 	#projects p {
 		color: #DDD;
 		margin: 5px 0 5px 20px;
+		font-family: "Junction", Arial;
+	}
+
+	/*
+	 * "ProjectsList" box
+	 */
+	#projectsList {
+		width: 750px;
+	}
+
+	#projectsList div {
+		width: 750px;
+		height: 225px;
+		margin-top: 20px;
+		opacity: 0;
+		float: left;
+		position: relative;
+		background-color: rgba(100,100,100,0.1);
+	}
+
+	#projectsList div img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 225px;
+		height: 225px;
+	}
+
+	#projectsList div h3 {
+		position: absolute;
+		top: 0;
+		right: 20px;
+		font-family: "Junction", Arial;
+	}
+
+	#projectsList div p {
+		position: absolute;
+		top: 55px;
+		left: 260px;
+		color: #444;
+		margin-right: 40px;
+		text-indent: 20px;
+		text-align: justify;
+		font-family: "Junction", Arial;
+	}
+
+	#projectsList div a {
+		position: absolute;
+		bottom: 5px;
+		right: 20px;
 		font-family: "Junction", Arial;
 	}
