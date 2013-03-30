@@ -125,16 +125,16 @@ header p {
 }
 
 /* Shadow for all boxes (with hover handling) */
-#who, #where, #website, #blog {
-	box-shadow: 2px 2px 6px #222;
+#who, #where, #website, #blog, #projects {
+	box-shadow: 3px 3px 8px #888;
 	-webkit-transition: all 0.2s linear;
 	   -moz-transition: all 0.2s linear;
 		 -o-transition: all 0.2s linear;
 			transition: all 0.2s linear;
 }
 
-#who:hover, #where:hover, #website:hover, #blog:hover {
-	box-shadow: 3px 3px 8px #888;
+#who:hover, #where:hover, #website:hover, #blog:hover, #projects:hover {
+	box-shadow: 2px 2px 6px #222;
 }
 	/*
 	 * "Who" & "Where" boxes
@@ -146,13 +146,21 @@ header p {
 		background-color: #666;
 	}
 
+	#who {
+		height: 200px;
+	}
+
+	#where {
+		height: 160px;
+	}
+
 	#who h2, #where h2 {
 		width: 390px;
 		/* box-shadow: 1px 4px 6px #666; */
 	}
 
 	#who p {
-		color: #ddd;
+		color: #DDD;
 		margin: 5px 10px;
 		text-indent: 20px;
 		text-align: justify;
@@ -179,6 +187,15 @@ header p {
 		float: right;
 		margin-top: 20px;
 		position: relative;
+		width: 257px;
+	}
+
+	#website {
+		height: 257px;
+	}
+
+	#blog {
+		height: 107px;
 	}
 
 	#website:hover, #blog:hover {
@@ -195,4 +212,24 @@ header p {
 	/* image to bright so I set the h2 a bit more dark*/
 	#blog h2 {
 		background-color: rgba(150,150,150,0.5);
+	}
+
+	/*
+	 * "Projects" box
+	 */
+	#projects {
+		float: left;
+		width: 750px;
+		margin-top: 20px;
+		background-color: #666;
+	}
+
+	#projects:hover {
+		cursor: pointer;
+	}
+
+	#projects p {
+		color: #DDD;
+		margin: 5px 0 5px 20px;
+		font-family: "Junction", Arial;
 	}
