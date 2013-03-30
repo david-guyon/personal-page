@@ -124,6 +124,18 @@ header p {
 	margin: 0 auto;
 }
 
+/* Shadow for all boxes (with hover handling) */
+#who, #where, #website, #blog {
+	box-shadow: 2px 2px 6px #222;
+	-webkit-transition: all 0.2s linear;
+	   -moz-transition: all 0.2s linear;
+		 -o-transition: all 0.2s linear;
+			transition: all 0.2s linear;
+}
+
+#who:hover, #where:hover, #website:hover, #blog:hover {
+	box-shadow: 3px 3px 8px #888;
+}
 	/*
 	 * "Who" & "Where" boxes
 	 */
@@ -132,7 +144,6 @@ header p {
 		width: 400px;
 		margin-top: 20px;
 		background-color: #666;
-		box-shadow: 3px 3px 8px #888;
 	}
 
 	#who h2, #where h2 {
@@ -168,7 +179,10 @@ header p {
 		float: right;
 		margin-top: 20px;
 		position: relative;
-		box-shadow: 3px 3px 8px #888;
+	}
+
+	#website:hover, #blog:hover {
+		cursor: pointer;
 	}
 
 	#website h2, #blog h2 {

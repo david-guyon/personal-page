@@ -1,6 +1,8 @@
 $(function(){
 	handleWhereBox();
 	handleWhoBox();
+	handleWebsiteBox();
+	handleBlogBox();
 });
 
 function handleWhereBox() {
@@ -54,5 +56,17 @@ function handleWhereBox() {
 function handleWhoBox() {
 	$("#who a").click(function() {
 		$("#who a").html("Soon..");
+	});
+}
+
+function handleWebsiteBox() {
+	$("#website").click(function() {
+		window.open("http://songaccoustic.fr", '_blank').focus();
+	});
+}
+
+function handleBlogBox() {
+	$("#blog").click(function() {
+		window.open("http://blog.songaccoustic.fr", '_blank').focus();
 	});
 }
