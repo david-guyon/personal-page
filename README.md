@@ -1,5 +1,4 @@
-This repo contains my personnal web page : 
-#Personnal web page
+#"David Guyon" personal web page
 
 ##Project description
 The aim of this page is to present myself. This page will be displayed at http://david.guyon.me. 
