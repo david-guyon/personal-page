@@ -164,7 +164,7 @@ header a:hover {
 	}
 
 	#who {
-		height: 200px;
+		height: 220px;
 	}
 
 	#where {
@@ -180,6 +180,7 @@ header a:hover {
 		color: #DDD;
 		margin: 5px 10px;
 		text-indent: 20px;
+    line-height: 150%;
 		text-align: justify;
 		font-family: "Junction", Arial;
 		font-size: 15px;
