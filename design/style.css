@@ -167,6 +167,10 @@ header a:hover {
 		height: 220px;
 	}
 
+  #who.fr {
+    height: 260px;
+  }
+
 	#where {
 		height: 160px;
 	}
