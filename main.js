@@ -19,23 +19,23 @@ function handleWhereBox() {
 		console.log(e.target.alt);
 		switch(e.target.alt) {
 			case "Facebook logo":
-				$("#linkContainer a").html("Mon mur Facebook");
+				$("#linkContainer a").html("My Facebook wall");
 				$("#linkContainer a").attr("href", "https://www.facebook.com/GuyonDavid");
 			break;
 			case "Google+ logo":
-				$("#linkContainer a").html("Ma page Google plus");
+				$("#linkContainer a").html("My Google plus page");
 				$("#linkContainer a").attr("href", "https://plus.google.com/118272748818799969626");
 			break;
 			case "Twitter logo":
-				$("#linkContainer a").html("Mon compte Twitter");
+				$("#linkContainer a").html("My Twitter account");
 				$("#linkContainer a").attr("href", "https://twitter.com/dgetux");
 			break;
 			case "Youtube logo":
-				$("#linkContainer a").html("Ma chaîne Youtube");
+				$("#linkContainer a").html("My Youtube channel");
 				$("#linkContainer a").attr("href", "http://www.youtube.com/user/misterchimizz");
 			break;
 			case "Last.fm logo":
-				$("#linkContainer a").html("Mon compte Last.fm");
+				$("#linkContainer a").html("My Last.fm account");
 				$("#linkContainer a").attr("href", "http://www.lastfm.fr/user/misterchimiz");
 			break;
 			default:

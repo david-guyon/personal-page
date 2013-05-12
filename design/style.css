@@ -196,7 +196,7 @@ header a:hover {
 
 	#where #linkContainer {
 		margin-top: 10px;
-		padding: 3px 5px;
+		padding: 1px 5px 3px 30px;
 	}
 
 	#where #linkContainer a {
@@ -307,3 +307,12 @@ header a:hover {
 		right: 20px;
 		font-family: "Junction", Arial;
 	}
+
+/*
+ * Creative Commons Licence
+ */
+#licence {
+  text-align: center;
+  padding-top: 50px;
+  margin-bottom: 50px;
+}

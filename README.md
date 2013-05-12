@@ -5,6 +5,10 @@ This repo contains my personnal web page :
 The aim of this page is to present myself. This page will be displayed at http://david.guyon.me. 
 
 ##Last important updates
+###12/05/13
+- Creative Commons licence created
+- Page completly in English. Still thinking on creating a French version
+
 ###30/03/13
 - header finished 
 - "Where am I?" block is add and finished
