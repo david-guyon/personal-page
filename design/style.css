@@ -65,6 +65,17 @@ li {
 	/*width: 48px;*/
 }
 
+a {
+	font-family: "Junction", Arial;
+	font-size: 15px;
+  color: #67BCE6;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #39ADE6;
+}
+
 /*
  * Header
  */
@@ -122,15 +133,9 @@ header p {
 }
 
 header a {
+  color: #30A63D;
 	float: right;
-	margin-top: 20px;
-	font-family: "Junction", Arial;
-	font-size: 15px;
-}
-
-header a:hover {
-	text-decoration: none;
-	color: #39ADE6;
+	margin-top: 10px;
 }
 
 /*
@@ -188,15 +193,6 @@ header a:hover {
 		text-align: justify;
 		font-family: "Junction", Arial;
 		font-size: 15px;
-	}
-
-	#who a, #where #linkContainer a {
-		color: #67BCE6;
-	}
-
-	#who a:hover, #where #linkContainer a:hover {
-		text-decoration: none;
-		color: #39ADE6;
 	}
 
 	#where #linkContainer {
@@ -310,8 +306,50 @@ header a:hover {
 		position: absolute;
 		bottom: 5px;
 		right: 20px;
-		font-family: "Junction", Arial;
 	}
+
+/*
+ * About page
+ */
+header.about {
+  height: 10px;
+}
+
+#aboutContent {
+  position: relative;
+	width: 750px;
+	margin: 0 auto;
+  margin-top: 20px;
+  box-shadow: 3px 3px 8px #888;
+  background-color: #666;
+}
+
+#aboutContent a#backButton {
+  position: absolute;
+  right: 15px;
+  top: 8px;
+}
+
+#aboutContent #baby {
+  float: right;
+  width: 208px;
+  height: 300px;
+  margin: 10px 20px 0 20px;
+  background-image: url(../assets/images/baby.jpg);
+  background-repeat: no-repeat;
+  box-shadow: inset 1px 2px 8px #000;
+}
+
+#aboutContent p {
+  color: #DDD;
+  margin: 20px;
+  padding-bottom: 14px;
+  text-indent: 20px;
+  line-height: 150%;
+  text-align: justify;
+  font-family: "Junction", Arial;
+  font-size: 16px;
+}
 
 /*
  * Creative Commons Licence
