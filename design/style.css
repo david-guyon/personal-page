@@ -111,6 +111,7 @@ header #rightToImage {
 	left: 150px;
 	top: 30px;
 	width: 600px;
+  height: 160px;
 }
 
 header h1 {
@@ -129,13 +130,15 @@ header p {
 	margin-left: 15px;
 	text-indent: 20px;
 	line-height: 140%;
+  text-align: justify;
 	font-family: "Junction", Arial;
 }
 
 header a {
+  position: absolute;
+  right: 0;
+  bottom: 0px;
   color: #30A63D;
-	float: right;
-	margin-top: 10px;
 }
 
 /*
