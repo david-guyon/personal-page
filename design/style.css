@@ -98,7 +98,7 @@ header #headerContent {
 	padding-top: 20px;
 }
 
-header img {
+header img#pictureMe {
 	position: absolute;
 	left: 5px;
 	top: 20px;
@@ -134,11 +134,17 @@ header p {
 	font-family: "Junction", Arial;
 }
 
-header a {
+header a#mail {
   position: absolute;
   right: 0;
   bottom: 0px;
   color: #30A63D;
+}
+
+header a#lang {
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 /*
