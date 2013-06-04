@@ -138,7 +138,7 @@ header a#mail {
   color: #30A63D;
 }
 
-header a#mail {
+header a#mail:hover {
   color: #5FD35F;
 }
 
