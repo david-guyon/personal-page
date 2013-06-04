@@ -215,6 +215,13 @@ header a#lang {
 		font-size: 14px;
 	}
 
+  /*
+   * Temporary: work in progress
+   */
+  #where img {
+    margin-left: 150px;
+  }
+
 	/*
 	 * "Website" & "Blog" boxes
 	 */
