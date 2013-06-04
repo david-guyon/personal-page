@@ -141,6 +141,10 @@ header a#mail {
   color: #30A63D;
 }
 
+header a#mail {
+  color: #5FD35F;
+}
+
 header a#lang {
   position: absolute;
   right: 0;
