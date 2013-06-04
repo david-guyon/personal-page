@@ -64,7 +64,7 @@ function handleWebsiteBox() {
 
 function handleBlogBox() {
 	$("#blog").click(function() {
-		window.open("http://blog.songaccoustic.fr", '_blank').focus();
+		window.open("http://blog.david.guyon.me", '_self');
 	});
 }
 
