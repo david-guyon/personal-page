@@ -1,10 +1,7 @@
 @font-face {
     font-family: 'Existence';
-    src: url('./fonts/Existence-Light-webfont.eot');
-    src: url('./fonts/Existence-Light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('./fonts/Existence-Light-webfont.woff') format('woff'),
-         url('./fonts/Existence-Light-webfont.ttf') format('truetype'),
-         url('./fonts/Existence-Light-webfont.svg#ExistenceLight') format('svg');
+    src: url('./fonts/Existence-Light.otf') format('opentype'),
+         url('./fonts/Existence-Light.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 
