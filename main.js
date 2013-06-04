@@ -54,9 +54,6 @@ function handleWhereBox() {
 }
 
 function handleWhoBox() {
-	$("#who a").click(function() {
-		$("#who a").html("Soon..");
-	});
 }
 
 function handleWebsiteBox() {
