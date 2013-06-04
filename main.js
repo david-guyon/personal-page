@@ -7,7 +7,7 @@ $(function(){
 	/* Hide all project boxes */
 	$("#projectsList div").hide();
 
-	handleWhereBox();
+	//handleWhereBox(); Temporary comment and replace by a "work in progress" icon
 	handleWhoBox();
 	handleWebsiteBox();
 	handleBlogBox();
