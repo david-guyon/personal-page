@@ -2,10 +2,13 @@
  * Global variables
  */
 var projectsListExpanded = false;
+var currentLanguage = "en";
 
 $(function(){
 	/* Hide all project boxes */
 	$("#projectsList div").hide();
+
+  getLang();
 
 	//handleWhereBox(); Temporary comment and replace by a "work in progress" icon
 	handleWhoBox();
@@ -13,6 +16,12 @@ $(function(){
 	handleBlogBox();
 	handleProjectsBox();
 });
+
+function getLang() {
+  var lang = window.location.pathname.split('/');
+  if(lang[lang.length-1] == "index-fr.html")
+    currentLanguage = "fr";
+}
 
 function handleWhereBox() {
 	$("#where li").mouseover(function(e) {
@@ -71,7 +80,10 @@ function handleProjectsBox() {
 			hideWebsiteBox(1000);
 			setTimeout(function() {
 				showProjectsList(800);
-				$("#projects p").html("Click to go back");
+        if(currentLanguage == "en")
+  				$("#projects p").html("Click to close this section");
+        else
+  				$("#projects p").html("Clique pour fermer cette section");
 				projectsListExpanded = true;
 			}, 600);
 		} else {
@@ -81,7 +93,10 @@ function handleProjectsBox() {
 				showWebsiteBox(1000);
 					showWhereBox(1000);
 					showBlogBox(1000);
-					$("#projects p").html("Click to see all projects I did or that I'm currently doing");
+          if(currentLanguage == "en")
+  					$("#projects p").html("Click to see all projects I did or that I'm currently doing");
+          else
+  					$("#projects p").html("Clique pour voir l'ensemble des projets que j'ai fait ainsi que ceux sur lesquels je travaille actuellement");
 					projectsListExpanded = false;
 			}, 800);
 		}
