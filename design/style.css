@@ -179,15 +179,11 @@ header a#lang {
 	}
 
 	#who {
-		height: 220px;
+		height: 100%;
 	}
 
-  #who.fr {
-    height: 260px;
-  }
-
 	#where {
-		height: 160px;
+		height: 100%;
 	}
 
 	#who h2, #where h2 {
