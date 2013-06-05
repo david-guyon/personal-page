@@ -102,7 +102,7 @@ header #rightToImage {
 
 header h1 {
 	margin: 0;
-	color: #999;
+	color: #DDD;
 	font-size: 48px;
 	margin-left: 10px;
 	font-weight: normal;
@@ -110,7 +110,7 @@ header h1 {
 }
 
 header p {
-	color: #ddd;
+	color: #AAA;
 	font-size: 16px;
 	margin-top: 20px;
 	margin-left: 15px;
