@@ -7,17 +7,6 @@
 
 }
 
-@font-face {
-  font-family: 'Junction';
-  src: url('./fonts/Junction-webfont.eot');
-  src: url('./fonts/Junction-webfont.eot?#iefix') format('embedded-opentype'),
-       url('./fonts/Junction-webfont.woff') format('woff'),
-       url('./fonts/Junction-webfont.ttf') format('truetype'),
-       url('./fonts/Junction-webfont.svg#junctionregularRegular') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
 /*
  * General
  */
@@ -63,7 +52,7 @@ li {
 }
 
 a {
-	font-family: "Junction", Arial;
+	font-family: "Droid Sans", Arial;
 	font-size: 15px;
   color: #67BCE6;
 }
@@ -128,7 +117,7 @@ header p {
 	text-indent: 20px;
 	line-height: 140%;
   text-align: justify;
-	font-family: "Junction", Arial;
+	font-family: "Droid Sans", Arial;
 }
 
 header a#mail {
@@ -197,7 +186,7 @@ header a#lang {
 		text-indent: 20px;
     line-height: 150%;
 		text-align: justify;
-		font-family: "Junction", Arial;
+		font-family: "Droid Sans", Arial;
 		font-size: 15px;
 	}
 
@@ -207,7 +196,7 @@ header a#lang {
 	}
 
 	#where #linkContainer a {
-		font-family: "Junction", Arial;
+		font-family: "Droid Sans", Arial;
 		font-size: 14px;
 	}
 
@@ -269,7 +258,7 @@ header a#lang {
 	#projects p {
 		color: #DDD;
 		margin: 5px 0 5px 20px;
-		font-family: "Junction", Arial;
+		font-family: "Droid Sans", Arial;
 	}
 
 	/*
@@ -301,7 +290,7 @@ header a#lang {
 		position: absolute;
 		top: 0;
 		right: 20px;
-		font-family: "Junction", Arial;
+		font-family: "Droid Sans", Arial;
 	}
 
 	#projectsList div p {
@@ -312,7 +301,7 @@ header a#lang {
 		margin-right: 40px;
 		text-indent: 20px;
 		text-align: justify;
-		font-family: "Junction", Arial;
+		font-family: "Droid Sans", Arial;
 	}
 
 	#projectsList div a {
@@ -360,7 +349,7 @@ header.about {
   text-indent: 20px;
   line-height: 150%;
   text-align: justify;
-  font-family: "Junction", Arial;
+  font-family: "Droid Sans", Arial;
   font-size: 16px;
 }
 
