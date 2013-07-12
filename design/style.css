@@ -149,9 +149,9 @@ header a#lang {
 #who, #where, #website, #blog, #projects, #projectsList div {
 	box-shadow: 3px 3px 8px #888;
 	-webkit-transition: all 0.2s linear;
-	   -moz-transition: all 0.2s linear;
-		 -o-transition: all 0.2s linear;
-			transition: all 0.2s linear;
+ 	   -moz-transition: all 0.2s linear;
+  		 -o-transition: all 0.2s linear;
+	    		transition: all 0.2s linear;
 }
 
 #who:hover, #where:hover, #website:hover, #blog:hover, #projects:hover, #projectsList div:hover {
@@ -162,17 +162,10 @@ header a#lang {
 	 */
 	#who, #where {
 		float: left;
+		height: 100%;
 		width: 400px;
 		margin-top: 20px;
 		background-color: #666;
-	}
-
-	#who {
-		height: 100%;
-	}
-
-	#where {
-		height: 100%;
 	}
 
 	#who h2, #where h2 {
@@ -180,7 +173,7 @@ header a#lang {
 		/* box-shadow: 1px 4px 6px #666; */
 	}
 
-	#who p {
+	#who p, #where p {
 		color: #DDD;
 		margin: 5px 10px;
 		text-indent: 20px;
@@ -189,23 +182,6 @@ header a#lang {
 		font-family: "Droid Sans", Arial;
 		font-size: 15px;
 	}
-
-	#where #linkContainer {
-		margin-top: 10px;
-		padding: 1px 5px 3px 30px;
-	}
-
-	#where #linkContainer a {
-		font-family: "Droid Sans", Arial;
-		font-size: 14px;
-	}
-
-  /*
-   * Temporary: work in progress
-   */
-  #where img {
-    margin-left: 150px;
-  }
 
 	/*
 	 * "Website" & "Blog" boxes
