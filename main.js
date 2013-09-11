@@ -76,7 +76,7 @@ function handleProjectsBox() {
 			hideWhoBox(1000);
 			hideWebsiteBox(1000);
 			setTimeout(function() {
-				showProjectsList(800);
+				showProjectsList(600);
         if(currentLanguage == "en")
   				$("#projects p").html("Click to close this section");
         else
@@ -84,7 +84,7 @@ function handleProjectsBox() {
 				projectsListExpanded = true;
 			}, 600);
 		} else {
-			hideProjectsList(400);
+			hideProjectsList(200);
 			setTimeout(function() {
 				showWhoBox(1000);
 				showWebsiteBox(1000);
@@ -140,7 +140,7 @@ function showProjectsList(duration) {
 			that.animate({
 				opacity: 1
 			}, duration);
-		}, 400 * index);
+		}, 300 * index);
 	});
 }
 
@@ -155,6 +155,6 @@ function hideProjectsList(duration) {
 					that.hide();
 				}, 150);
 			});
-		}, 400 * index);
+		}, 300 * index);
 	});
 }
