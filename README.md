@@ -9,6 +9,9 @@ The aim of this page is to present myself. This page will be displayed at http:/
 - Convert all indent to spaces
 - Fix the shadow bug when hover the boxes
 
+###07/12/13
+- CV updated
+
 ###28/10/13
 - Add a link in the Pie-Boat project tile
 
