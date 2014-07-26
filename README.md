@@ -4,6 +4,11 @@
 The aim of this page is to present myself. This page will be displayed at http://david.guyon.me. 
 
 ##Last important updates
+###26/07/14
+- Add new project in the list: Dynamic lstopo
+- Convert all indent to spaces
+- Fix the shadow bug when hover the boxes
+
 ###28/10/13
 - Add a link in the Pie-Boat project tile
 
