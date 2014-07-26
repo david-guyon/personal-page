@@ -4,56 +4,55 @@
          url('./fonts/Existence-Light.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-
 }
 
 /*
  * General
  */
 body {
-	background-color: #FBFAF7;
+  background-color: #FBFAF7;
 }
 
 .clearer {
-	clear: both;
-	margin-bottom: 50px;
+  clear: both;
+  margin-bottom: 50px;
 }
 
 h2 {
-	color: #fff;
-	margin-top: 0;
-	font-size: 30px;
-	padding-top: 4px;
-	padding-left: 10px;
-	font-weight: normal;
-	font-family: "Existence", Arial;
-	background-color: rgba(255,255,255,0.5);
-	-webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
-	   -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
-		 -o-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
-			box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
-	-webkit-text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
-	   -moz-text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
-		 -o-text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
-			text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+  color: #fff;
+  margin-top: 0;
+  font-size: 30px;
+  padding-top: 4px;
+  padding-left: 10px;
+  font-weight: normal;
+  font-family: "Existence", Arial;
+  background-color: rgba(255,255,255,0.5);
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
+     -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
+       -o-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
+  -webkit-text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+     -moz-text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+       -o-text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+          text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
 }
 }
 
 ul {
-	list-style-type:none;
-	text-align: center;
-	margin: 0 0 10px 0;
+  list-style-type:none;
+  text-align: center;
+  margin: 0 0 10px 0;
 }
 
 li {
-	display: inline-block;
-	margin: 2px 2px;
-	/*width: 48px;*/
+  display: inline-block;
+  margin: 2px 2px;
+  /*width: 48px;*/
 }
 
 a {
-	font-family: "Droid Sans", Arial;
-	font-size: 15px;
+  font-family: "Droid Sans", Arial;
+  font-size: 15px;
   color: #67BCE6;
 }
 
@@ -66,58 +65,58 @@ a:hover {
  * Header
  */
 header {
-	height: 200px;
-	width: 100%;
-	margin: 0;
-	background-color: #111111;
-	border-bottom: 2px solid #30A63D;
-	-webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
-	   -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
-		 -o-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
-			box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+  height: 200px;
+  width: 100%;
+  margin: 0;
+  background-color: #111111;
+  border-bottom: 2px solid #30A63D;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+     -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+       -o-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
 }
 
 header #headerContent {
-	position: relative;
-	width: 750px;
-	margin: 0 auto;
-	padding-top: 20px;
+  position: relative;
+  width: 750px;
+  margin: 0 auto;
+  padding-top: 20px;
 }
 
 header img#pictureMe {
-	position: absolute;
-	left: 5px;
-	top: 20px;
-	height: 150px;
-	border: 2px solid #777;
+  position: absolute;
+  left: 5px;
+  top: 20px;
+  height: 150px;
+  border: 2px solid #777;
 }
 
 header #rightToImage {
-	position: absolute;
-	left: 150px;
-	top: 30px;
-	width: 600px;
+  position: absolute;
+  left: 150px;
+  top: 30px;
+  width: 600px;
   height: 160px;
 }
 
 header h1 {
-	margin: 0;
-	color: #DDD;
-	font-size: 48px;
-	margin-left: 10px;
-	font-weight: normal;
-	font-family: "Existence", Arial;
+  margin: 0;
+  color: #DDD;
+  font-size: 48px;
+  margin-left: 10px;
+  font-weight: normal;
+  font-family: "Existence", Arial;
 }
 
 header p {
-	color: #AAA;
-	font-size: 16px;
-	margin-top: 20px;
-	margin-left: 15px;
-	text-indent: 20px;
-	line-height: 140%;
+  color: #AAA;
+  font-size: 16px;
+  margin-top: 20px;
+  margin-left: 15px;
+  text-indent: 20px;
+  line-height: 140%;
   text-align: justify;
-	font-family: "Droid Sans", Arial;
+  font-family: "Droid Sans", Arial;
 }
 
 header a#mail {
@@ -141,150 +140,155 @@ header a#lang {
  * Content and boxes
  */
 #bodyContent {
-	width: 750px;
-	margin: 0 auto;
+  width: 750px;
+  margin: 0 auto;
 }
 
 /* Shadow for all boxes (with hover handling) */
-#who, #where, #website, #blog, #projects, #projectsList div {
-	box-shadow: 3px 3px 8px #888;
-	-webkit-transition: all 0.2s linear;
- 	   -moz-transition: all 0.2s linear;
-  		 -o-transition: all 0.2s linear;
-	    		transition: all 0.2s linear;
+#who, #where, 
+#website, #blog, 
+#projects, #projectsList div {
+  box-shadow: 2px 2px 6px #888;
+  -webkit-transition: all 0.2s linear;
+     -moz-transition: all 0.2s linear;
+       -o-transition: all 0.2s linear;
+          transition: all 0.2s linear;
 }
 
-#who:hover, #where:hover, #website:hover, #blog:hover, #projects:hover, #projectsList div:hover {
-	box-shadow: 2px 2px 6px #222;
+#who:hover, #where:hover, 
+#website:hover, #blog:hover, 
+#projects:hover, #projectsList div:hover {
+  box-shadow: 2px 2px 6px #222;
 }
-	/*
-	 * "Who" & "Where" boxes
-	 */
-	#who, #where {
-		float: left;
-		height: 100%;
-		width: 400px;
-		margin-top: 20px;
-		background-color: #666;
-	}
 
-	#who h2, #where h2 {
-		width: 390px;
-		/* box-shadow: 1px 4px 6px #666; */
-	}
+/*
+ * "Who" & "Where" boxes
+ */
+#who, #where {
+  float: left;
+  height: 100%;
+  width: 400px;
+  margin-top: 20px;
+  background-color: #666;
+}
 
-	#who p, #where p {
-		color: #DDD;
-		margin: 5px 10px;
-		text-indent: 20px;
-    line-height: 150%;
-		text-align: justify;
-		font-family: "Droid Sans", Arial;
-		font-size: 15px;
-	}
+#who h2, #where h2 {
+  width: 390px;
+  /* box-shadow: 1px 4px 6px #666; */
+}
 
-	/*
-	 * "Website" & "Blog" boxes
-	 */
-	#website, #blog {
-		float: right;
-		margin-top: 20px;
-		position: relative;
-		width: 257px;
-	}
+#who p, #where p {
+  color: #DDD;
+  margin: 5px 10px;
+  text-indent: 20px;
+  line-height: 150%;
+  text-align: justify;
+  font-family: "Droid Sans", Arial;
+  font-size: 15px;
+}
 
-	#website {
-		height: 257px;
-	}
+/*
+ * "Website" & "Blog" boxes
+ */
+#website, #blog {
+  float: right;
+  margin-top: 20px;
+  position: relative;
+  width: 257px;
+}
 
-	#blog {
-		height: 107px;
-	}
+#website {
+  height: 257px;
+}
 
-	#website:hover, #blog:hover {
-		cursor: pointer;
-	}
+#blog {
+  height: 107px;
+}
 
-	#website h2, #blog h2 {
-		top: 0;
-		left: 0;
-		width: 247px;
-		position: absolute;
-	}
+#website:hover, #blog:hover {
+  cursor: pointer;
+}
 
-	/* image to bright so I set the h2 a bit more dark*/
-	#blog h2 {
-		background-color: rgba(150,150,150,0.5);
-	}
+#website h2, #blog h2 {
+  top: 0;
+  left: 0;
+  width: 247px;
+  position: absolute;
+}
 
-	/*
-	 * "Projects" box
-	 */
-	#projects {
-		float: left;
-		width: 750px;
-		margin-top: 20px;
-		background-color: #666;
-	}
+/* image too bright so I set the h2 a bit more dark*/
+#blog h2 {
+  background-color: rgba(150,150,150,0.5);
+}
 
-	#projects:hover {
-		cursor: pointer;
-	}
+/*
+ * "Projects" box
+ */
+#projects {
+  float: left;
+  width: 750px;
+  margin-top: 20px;
+  background-color: #666;
+}
 
-	#projects p {
-		color: #DDD;
-		margin: 5px 0 5px 20px;
-		font-family: "Droid Sans", Arial;
-	}
+#projects:hover {
+  cursor: pointer;
+}
 
-	/*
-	 * "ProjectsList" box
-	 */
-	#projectsList {
-		width: 750px;
-	}
+#projects p {
+  color: #DDD;
+  margin: 5px 0 5px 20px;
+  font-family: "Droid Sans", Arial;
+}
 
-	#projectsList div {
-		width: 750px;
-		height: 225px;
-		margin-top: 20px;
-		opacity: 0;
-		float: left;
-		position: relative;
-		background-color: rgba(100,100,100,0.1);
-	}
+/*
+ * "ProjectsList" box
+ */
+#projectsList {
+  width: 750px;
+}
 
-	#projectsList div img {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 225px;
-		height: 225px;
-	}
+#projectsList div {
+  width: 750px;
+  height: 225px;
+  margin-top: 20px;
+  opacity: 0;
+  float: left;
+  position: relative;
+  background-color: rgba(100,100,100,0.1);
+}
 
-	#projectsList div h3 {
-		position: absolute;
-		top: 0;
-		right: 20px;
-		font-family: "Droid Sans", Arial;
-	}
+#projectsList div img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 225px;
+  height: 225px;
+}
 
-	#projectsList div p {
-		position: absolute;
-		top: 55px;
-		left: 260px;
-		color: #444;
-		margin-right: 40px;
-		text-indent: 20px;
-		text-align: justify;
-		font-family: "Droid Sans", Arial;
-	}
+#projectsList div h3 {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  font-family: "Droid Sans", Arial;
+}
 
-	#projectsList div a {
-		position: absolute;
-		bottom: 5px;
-		right: 20px;
-	}
+#projectsList div p {
+  position: absolute;
+  top: 55px;
+  left: 260px;
+  color: #444;
+  margin-right: 40px;
+  text-indent: 20px;
+  text-align: justify;
+  font-family: "Droid Sans", Arial;
+}
+
+#projectsList div a {
+  position: absolute;
+  bottom: 5px;
+  right: 20px;
+}
 
 /*
  * About page
@@ -295,8 +299,8 @@ header.about {
 
 #aboutContent {
   position: relative;
-	width: 750px;
-	margin: 0 auto;
+  width: 750px;
+  margin: 0 auto;
   margin-top: 20px;
   box-shadow: 3px 3px 8px #888;
   background-color: #666;
