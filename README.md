@@ -4,9 +4,28 @@
 The aim of this page is to present myself. This page will be displayed at http://david.guyon.me. 
 
 ##Last important updates
+###28/10/13
+- Add a link in the Pie-Boat project tile
+
+###11/09/13
+- Add new project in the list: Bomberman
+- Better JS to show/hide the list
+
+###12/07/13
+- Section "Where" updated
+
+###07/07/13
+- Add new project in the list: ENU Taxis
+
+###05/06/13
+- JS handles language switching
+- Add a Favicon
+- new font: Droid from Google
+
 ###12/05/13
 - Creative Commons licence created
-- Page completly in English. Still thinking on creating a French version
+- Page completly in English
+- French version available
 
 ###30/03/13
 - header finished 
