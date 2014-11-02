@@ -4,6 +4,11 @@
 The aim of this page is to present myself. This page will be displayed at http://david.guyon.me. 
 
 ##Last important updates
+###01/10/14
+- Complete new design
+- New version of the English CV
+- New version of the French CV
+
 ###26/07/14
 - Add new project in the list: Dynamic lstopo
 - Convert all indent to spaces
