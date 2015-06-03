@@ -4,6 +4,10 @@
 The aim of this page is to present myself. This page will be displayed at http://david.guyon.me. 
 
 ##Last important updates
+###03/06/15
+- Publications page
+- 2 entries in the publications page
+
 ###01/10/14
 - Complete new design
 - New version of the English CV
