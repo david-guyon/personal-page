@@ -207,6 +207,24 @@
 			margin-bottom: 0;
 		}
 
+		article.publication {
+			width: 100%;
+			margin-bottom: 1em;
+			text-align: left;
+			background: #fff;
+			box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,0.15), 0px 2px 3px 0px rgba(0,0,0,0.1);
+		}
+
+		article.publication span.title {
+			font-weight: bold;
+		}
+
+		article.publication span.date {
+			font-style: italic;
+			float: right;
+			margin-right: 10px;
+		}
+
 	/* Image */
 
 		.image
