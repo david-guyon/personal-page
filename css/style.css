@@ -12,6 +12,14 @@
 /* Basic                                                                         */
 /*********************************************************************************/
 
+	html, body {
+		height: 100%;
+	}
+
+	.fill-page {
+		height: 100%;
+	}
+
 	body,input,textarea,select
 	{
 		font-family: 'Open Sans', sans-serif;
@@ -207,6 +215,7 @@
 			margin-bottom: 0;
 		}
 
+		article.course,
 		article.publication {
 			width: 100%;
 			margin-bottom: 1em;
@@ -215,12 +224,14 @@
 			box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,0.15), 0px 2px 3px 0px rgba(0,0,0,0.1);
 		}
 
+		article.course p.left,
 		article.publication p.left {
 			float: left;
 			margin-bottom: 1em;
 			margin-top: 0.5em;
 		}
 
+		article.course p.right,
 		article.publication p.right {
 			float: right;
 			margin-bottom: 1em;
@@ -235,12 +246,22 @@
 		article.publication span.date {
 			font-style: italic;
 			top: 0;
-			float: right;
 			margin-right: 1em;
 		}
 
 		article.publication span.authors {}
 		article.publication span.conference {}
+
+		article.course span.title {
+			font-weight: bold;
+		}
+
+		article.course span.class {}
+		article.course span.year {
+			font-style: italic;
+			top: 0;
+			margin-right: 1em;
+		}
 
 	/* Image */
 
@@ -700,7 +721,7 @@
 			}
 
 /*********************************************************************************/
-/* Copyright                                                                     */
+/* Copyright + footer                                                            */
 /*********************************************************************************/
 
 	#copyright
@@ -708,20 +729,25 @@
 		color: #666;
 	}
 
-	footer #
+	#copyright a
+	{
+		color: inherit;
 
-		#copyright a
-		{
-			color: inherit;
+		-moz-transition: color .2s ease-in-out;
+		-webkit-transition: color .2s ease-in-out;
+		-o-transition: color .2s ease-in-out;
+		-ms-transition: color .2s ease-in-out;
+		transition: color .2s ease-in-out;
+	}
 
-			-moz-transition: color .2s ease-in-out;
-			-webkit-transition: color .2s ease-in-out;
-			-o-transition: color .2s ease-in-out;
-			-ms-transition: color .2s ease-in-out;
-			transition: color .2s ease-in-out;
-		}
+	#copyright a:hover
+	{
+		color: #777;
+	}
 
-		#copyright a:hover
-		{
-			color: #777;
-		}
+	footer#footer {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		padding: 2em 0;
+	}
