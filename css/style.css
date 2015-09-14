@@ -33,7 +33,7 @@
 			-ms-animation: none !important;
 			animation: none !important;
 		}
-	
+
 	a
 	{
 		color: #30A63D;
@@ -44,7 +44,7 @@
 		-ms-transition: color .2s ease-in-out;
 		transition: color .2s ease-in-out;
 	}
-	
+
 		a:hover
 		{
 			color: #3FB84C !important;
@@ -72,7 +72,7 @@
 		top: 0.5em;
 		font-size: 0.8em;
 	}
-	
+
 	sup
 	{
 		position: relative;
@@ -86,33 +86,33 @@
 		padding: 1em 0 1em 1.5em;
 		font-style: italic;
 	}
-				
+
 	h1, h2, h3, h4, h5, h6
 	{
 		color: #3e3e3e;
 	}
-	
+
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a
 		{
 			text-decoration: none;
 			color: inherit;
 		}
-	
+
 	h2, h3, h4, h5, h6
 	{
 		font-weight: 700;
 	}
-	
+
 	h1
 	{
 		font-weight: 300;
 	}
-	
+
 		h1 strong
 		{
 			font-weight: 700;
 		}
-	
+
 	em, i
 	{
 		font-style: italic;
@@ -122,7 +122,7 @@
 	{
 		clear: both;
 	}
-	
+
 	hr
 	{
 		border: 0;
@@ -132,19 +132,19 @@
 		height: 1px;
 		margin: 3em 0 4em 0;
 	}
-	
+
 	p, ul, ol, dl, table
 	{
 		margin-bottom: 2em;
 	}
 
 	/* Tables */
-	
+
 		table
 		{
 			width: 100%;
 		}
-		
+
 			table.default
 			{
 				width: 100%;
@@ -159,12 +159,12 @@
 					{
 						border-top: 0;
 					}
-			
+
 				table.default td
 				{
 					padding: 0.5em 1em 0.5em 1em;
 				}
-				
+
 				table.default th
 				{
 					text-align: left;
@@ -172,29 +172,29 @@
 					font-weight: 600;
 					margin: 0 0 1em 0;
 				}
-			
+
 				table.default thead
 				{
 					background: #4f4f4f;
 					color: #fff;
 				}
-				
+
 				table.default tfoot
 				{
 				}
-				
+
 				table.default tbody
 				{
 				}
 
 	/* Section/Article */
-	
+
 		section,
 		article
 		{
 			margin-bottom: 3em;
 		}
-		
+
 		section > :last-child,
 		article > :last-child
 		{
@@ -215,15 +215,32 @@
 			box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,0.15), 0px 2px 3px 0px rgba(0,0,0,0.1);
 		}
 
-		article.publication span.title {
+		article.publication p.left {
+			float: left;
+			margin-bottom: 1em;
+			margin-top: 0.5em;
+		}
+
+		article.publication p.right {
+			float: right;
+			margin-bottom: 1em;
+			margin-top: 0.5em;
+		}
+
+		article.publication a.title {
 			font-weight: bold;
+			text-decoration: none;
 		}
 
 		article.publication span.date {
 			font-style: italic;
+			top: 0;
 			float: right;
-			margin-right: 10px;
+			margin-right: 1em;
 		}
+
+		article.publication span.authors {}
+		article.publication span.conference {}
 
 	/* Image */
 
@@ -232,7 +249,7 @@
 			display: inline-block;
 			position: relative;
 		}
-		
+
 			.image img
 			{
 				display: block;
@@ -244,20 +261,20 @@
 				display: block;
 				width: 100%;
 			}
-			
+
 			.image.featured
 			{
 				display: block;
 				width: 100%;
 				margin: 0 0 2em 0;
 			}
-			
+
 			.image.left
 			{
 				float: left;
 				margin: 0 2em 2em 0;
 			}
-			
+
 			.image.centered
 			{
 				display: block;
@@ -271,7 +288,7 @@
 				}
 
 	/* Button */
-	
+
 		input[type="button"],
 		input[type="submit"],
 		input[type="reset"],
@@ -311,7 +328,7 @@
 				background-color: #3FB84C;
 				color: #fff !important;
 			}
-			
+
 			input[type="button"]:active,
 			input[type="submit"]:active,
 			input[type="reset"]:active,
@@ -320,7 +337,7 @@
 				background-color: #30A63D;
 				top: 1px;
 			}
-		
+
 			input[type="button"].alt,
 			input[type="submit"].alt,
 			input[type="reset"].alt,
@@ -338,7 +355,7 @@
 					background-color: #4f4f4f;
 					color: #fff !important;
 				}
-				
+
 				input[type="button"].alt:active,
 				input[type="submit"].alt:active,
 				input[type="reset"].alt:active,
@@ -346,7 +363,7 @@
 				{
 					background-color: #3f3f3f;
 				}
-		
+
 	/* List */
 
 		ul
@@ -358,18 +375,18 @@
 				list-style: disc;
 				padding-left: 1em;
 			}
-			
+
 				ul.default li
 				{
 					padding-left: 0.5em;
 				}
-				
+
 			ul.social
 			{
 				cursor: default;
 				margin: 0;
 			}
-			
+
 				ul.social li
 				{
 					position: relative;
@@ -437,7 +454,7 @@
 						{
 							top: -5px;
 						}
-						
+
 							ul.social li a:hover:before
 							{
 								background-color: transparent;
@@ -452,7 +469,7 @@
 					display: inline-block;
 					margin: 0 0 0 1em;
 				}
-				
+
 					ul.actions li:first-child
 					{
 						margin-left: 0;
@@ -460,7 +477,7 @@
 
 		ol
 		{
-		}	
+		}
 
 			ol.default
 			{
@@ -474,7 +491,7 @@
 				}
 
 	/* Box */
-			
+
 		.box
 		{
 			background: #fff;
@@ -515,7 +532,7 @@
 			-webkit-font-smoothing:antialiased;
 			-moz-osx-font-smoothing:grayscale;
 		}
-		
+
 		.icon > .label {
 			display: none;
 		}
@@ -527,7 +544,7 @@
 			margin: 0 0 1.5em 0;
 			cursor: default;
 		}
-		
+
 			.icon.featured:before
 			{
 				font-size: 6em;
@@ -553,13 +570,13 @@
 			background-image: none;
 			background-color: #fff;
 		}
-		
+
 		.wrapper.style2
 		{
 			background-color: #fafafa;
 			text-shadow: 1px 1px 0px #fff;
 		}
-		
+
 		.wrapper.style3
 		{
 			background-color: #f4f4f4;
@@ -574,11 +591,11 @@
 			padding-bottom: 4em;
 		}
 
-			.wrapper.style4 h1, 
-			.wrapper.style4 h2, 
-			.wrapper.style4 h3, 
-			.wrapper.style4 h4, 
-			.wrapper.style4 h5, 
+			.wrapper.style4 h1,
+			.wrapper.style4 h2,
+			.wrapper.style4 h3,
+			.wrapper.style4 h4,
+			.wrapper.style4 h5,
 			.wrapper.style4 h6
 			{
 				color: #fff;
@@ -600,7 +617,7 @@
 			{
 				background: #252525;
 			}
-		
+
 /*********************************************************************************/
 /* Nav                                                                           */
 /*********************************************************************************/
@@ -617,17 +634,17 @@
 		z-index: 10000;
 		cursor: default;
 	}
-	
+
 		#nav ul
 		{
 			margin-bottom: 0;
 		}
-	
+
 		#nav li
 		{
 			display: inline-block;
 		}
-		
+
 		#nav a
 		{
 			position: relative;
@@ -636,12 +653,12 @@
 			text-decoration: none;
 			outline: 0;
 		}
-		
+
 			#nav a:hover
 			{
 				color: #fff !important;
 			}
-			
+
 			#nav a.active:before
 			{
 				content: '';
@@ -654,7 +671,7 @@
 				border-right: solid 0.75em transparent;
 				border-top: solid 0.6em #282828;
 			}
-			
+
 /*********************************************************************************/
 /* Articles                                                                      */
 /*********************************************************************************/
@@ -676,7 +693,7 @@
 		#top p
 		{
 		}
-	
+
 			#top p a
 			{
 				color: inherit;
@@ -692,7 +709,7 @@
 	}
 
 	footer #
-	
+
 		#copyright a
 		{
 			color: inherit;
@@ -703,7 +720,7 @@
 			-ms-transition: color .2s ease-in-out;
 			transition: color .2s ease-in-out;
 		}
-		
+
 		#copyright a:hover
 		{
 			color: #777;
