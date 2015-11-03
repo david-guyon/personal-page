@@ -1,0 +1,408 @@
+@charset 'UTF-8';
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,600,600italic,700');
+@import url('http://fonts.googleapis.com/css?family=Droid+Sans:400,700');
+@import url('font-awesome.min.css');
+
+@font-face {
+  font-family: 'Existence';
+  src: url('/fonts/Existence-Light.otf') format('opentype'),
+       url('/fonts/Existence-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*
+ * General
+ */
+
+body.container {
+  margin: 0 auto;
+  width: 100%;
+  background-color: #FBFAF7;
+  font-family: "Open Sans", Arial;
+}
+
+a {
+  color: #236E2B;
+}
+
+a :hover {
+  color: #0F3513;
+  text-decoration: none;
+}
+
+section[id]:before {
+  content: "";
+  display: block;
+  height: 150px;
+}
+
+section {
+  background-image: url("/images/bg.png");
+  box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.05) inset, 0px 2px 3px 0px rgba(0, 0, 0, 0.1) inset;
+  padding-bottom: 8em;
+}
+
+section header {
+  margin: 0px 0px 3em;
+  text-align: center;
+}
+
+section header h2 {
+  font-size: 3em;
+  letter-spacing: -0.015em;
+  font-weight: 700;
+  color: #3E3E3E;
+}
+
+section header p {
+  font-size: 1.5em;
+  color: #888;
+  text-shadow: 1px 1px 0px #FFF;
+}
+
+/*
+ * Nav
+ */
+
+nav {
+  height: 52px;
+  background-color: #111;
+  border-bottom: 2px solid #30A63D !important;
+  -webkit-box-shadow: 0 2px 5px rgba(0,0,0,0.6);
+     -moz-box-shadow: 0 2px 5px rgba(0,0,0,0.6);
+       -o-box-shadow: 0 2px 5px rgba(0,0,0,0.6);
+          box-shadow: 0 2px 5px rgba(0,0,0,0.6);
+}
+
+nav a.navbar-brand {
+  font-family: "Existence", Arial;
+  color: #30A63D;
+  font-size: 30px;
+  margin-top: 2px;
+  font-weight: normal;
+}
+
+nav a.navbar-brand :hover {
+  color: #5FD35F;
+  text-decoration: none;
+}
+
+nav ul li a {
+  color: #CCC;
+  font-size: 18px;
+  font-family: "Open Sans", Arial;
+}
+
+nav ul.navbar-nav > li > a:hover,
+nav ul.navbar-nav > li > a:focus,
+nav ul.navbar-nav .open > a,
+nav ul.navbar-nav .open > a:focus,
+nav ul.navbar-nav .open > a:hover {
+    background-color: #383838;
+    color: #FFF;
+}
+
+/*
+ * Section Top
+ */
+
+section#top {
+  font-family: "Open Sans";
+  padding-top: 8em;
+  padding-bottom: 16em;
+  background-color: #FFF;
+}
+
+section#top h1 {
+  font-weight: normal;
+  font-size: 3.8em;
+  color: #3E3E3E;
+  margin-bottom: 25px;
+}
+
+section#top p {
+  font-size: 1.8em;
+  line-height: 1.75em;
+  color: #888;
+}
+
+section#top img {
+  border-radius: 50%;
+  width: 95%;
+  margin-top: 15px;
+}
+
+/*
+ * Section Last publications
+ */
+
+section#last-publications {
+  background-color: #FAFAFA;
+}
+
+/*
+ * Section Last courses
+ */
+
+section#last-courses {
+  background-color: #F4F4F4;
+}
+
+/*
+ * Section Portfolio
+ */
+
+section#portfolio {
+  text-shadow: 1px 1px 0px #FFF;
+  background-color: #E6E6E6;
+}
+
+section#portfolio article.box {
+  background: #FFF none repeat scroll 0% 0%;
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.15) inset, 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding-bottom: 2em;
+  margin-bottom: 2em;
+}
+
+section#portfolio article.box img {
+  width: 100%;
+}
+
+section#portfolio article.box p {
+  padding: 0px 2em;
+}
+
+/*
+ * Section Contact
+ */
+
+section#contact {
+  text-align: center;
+  background-color: #303030;
+  color: #999;
+  text-shadow: -1px -1px 0px #181818;
+}
+
+section#contact hr {
+  border-width: 1px 0px 0px;
+  border-style: solid none none;
+  border-color: rgba(0, 0, 0, 0.35) -moz-use-text-color -moz-use-text-color;
+  -moz-border-top-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-bottom-colors: none;
+  -moz-border-left-colors: none;
+  border-image: none;
+  box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.1);
+  height: 1px;
+  margin: 4em 0px 5em 0px;
+}
+
+section#contact header {
+  padding-bottom: 4em;
+}
+
+section#contact header h2 {
+  color: #FFF;
+}
+
+section#contact header p {
+  color: #999;
+  text-shadow: -1px -1px 0px #181818;
+  padding-bottom: 2em;
+}
+
+section#contact header h3 a {
+  color: #FFF;
+  font-size: 2em;
+  transition: color 0.2s ease-in-out 0s;
+  font-weight: 700;
+}
+
+section#contact header h3 a:hover {
+  color: #3FB84C;
+}
+
+section#contact div div > h3 {
+  color: #FFF;
+  font-weight: 700;
+  padding-bottom: 1em;
+}
+
+section#contact ul.social {
+  font-family: "FontAwesome";
+  padding-bottom: 2em;
+}
+
+section#contact ul.social li {
+  margin: 0.25em;
+}
+
+section#contact ul.social li a {
+  display: block;
+  width: 48px;
+  height: 48px;
+  border-radius: 6px;
+  top: 0;
+  position: relative;
+
+  -moz-transition: top .2s ease-in-out;
+  -webkit-transition: top .2s ease-in-out;
+  -o-transition: top .2s ease-in-out;
+  -ms-transition: top .2s ease-in-out;
+  transition: top .2s ease-in-out;
+}
+
+section#contact ul.social li a:before {
+  background-color: #444;
+  background-image: url('/images/bg.png'), -moz-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.2));
+  background-image: url('/images/bg.png'), -ms-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.2));
+  background-image: url('/images/bg.png'), -o-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.2));
+  background-image: url('/images/bg.png'), -webkit-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.2));
+  background-image: url('/images/bg.png'), linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.2));
+  border-radius: 6px;
+  box-shadow: inset 0px 0px 0px 1px #282828, inset 0px 2px 1px 0px rgba(255,255,255,0.1);
+  color: #2E2E2E !important;
+  display: block;
+  font-size: 26px;
+  height: 48px;
+  line-height: 48px;
+  text-align: center;
+  outline: 0;
+  overflow: hidden;
+  text-shadow: 1px 1px 0px rgba(255,255,255,0.1);
+  width: 48px;
+
+  -moz-transition: background-color .2s ease-in-out;
+  -webkit-transition: background-color .2s ease-in-out;
+  -o-transition: background-color .2s ease-in-out;
+  -ms-transition: background-color .2s ease-in-out;
+  transition: background-color .2s ease-in-out;
+}
+
+section#contact ul.social li a:hover {
+  top: -5px;
+}
+
+section#contact ul.social li a:hover::before {
+  background-color: transparent;
+}
+
+.icon > .label {
+    display: none;
+}
+
+ul.social li a.fa-twitter		  { background-color: #2DAAE4; }
+ul.social li a.fa-facebook		{ background-color: #3C5A98; }
+ul.social li a.fa-linkedin		{ background-color: #006599; }
+ul.social li a.fa-google-plus	{ background-color: #DA2713; }
+ul.social li a.fa-github		  { background-color: #f5f5f5; }
+ul.social li a.fa-bitbucket		{ background-color: #205081; }
+ul.social li a.fa-foursquare	{ background-color: #39A3D4; }
+ul.social li a.fa-soundcloud	{ background-color: #FE5419; }
+ul.social li a.fa-youtube		  { background-color: #BF2E25; }
+
+section#contact footer {
+  color: #666;
+  transition: color 0.2s ease-in-out 0s;
+}
+
+section#contact footer:hover {
+  color: #888;
+}
+
+section#contact footer a {
+  color: #236E2B;
+  transition: color 0.2s ease-in-out 0s;
+}
+
+section#contact footer:hover a {
+  color: #3FB84C;
+}
+
+/*
+ * Render single publication
+ */
+
+article#publication header h2 {
+  margin-top: 40px;
+}
+
+article#publication h3,
+article#publication h4 {
+  font-family: "Existence", Arial;
+  color: #222;
+}
+
+article#publication h3 {
+  margin-top: 18px;
+}
+
+article#publication h4 {
+  font-size: 20px;
+}
+
+article#publication p,
+article#publication ul {
+  color: #333;
+  font-size: 1.2em;
+  line-height: 1.5em;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+article#publication img {
+  padding: 5px;
+  border: 1px solid #CCC;
+}
+
+/*
+ * Render single course
+ */
+
+article#course header h2 {
+  margin-top: 40px;
+}
+
+article#course h3,
+article#course h4 {
+  font-family: "Existence", Arial;
+  color: #222;
+}
+
+article#course h3 {
+  margin-top: 18px;
+}
+
+article#course h4 {
+  font-size: 20px;
+}
+
+article#course p,
+article#course ul {
+  color: #333;
+  font-size: 1.2em;
+  line-height: 1.5em;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+article#course img {
+  padding: 5px;
+  border: 1px solid #CCC;
+}
+
+/*
+ * Footer
+ */
+
+body > footer {
+  color: #555;
+  width: 750px;
+  margin: 0 auto 20px auto;
+  font-size: 12px;
+  margin-top: 30px;
+  text-align: center;
+  font-family: "Open Sans", Arial;
+}
