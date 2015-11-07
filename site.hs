@@ -70,6 +70,20 @@ main = hakyll $ do
             >>= loadAndApplyTemplate "templates/default.html" courseCtx
             >>= relativizeUrls
 
+    -- Render projects
+    match "projects/*" $ do
+        route   $ setExtension ".html"
+        compile $ pandocCompiler
+            >>= loadAndApplyTemplate "templates/project.html" projectCtx
+
+            -- RSS feed
+            >>= (externalizeUrls $ feedRoot feedConfiguration)
+            >>= saveSnapshot "content"
+            >>= (unExternalizeUrls $ feedRoot feedConfiguration)
+
+            >>= loadAndApplyTemplate "templates/default.html" projectCtx
+            >>= relativizeUrls
+
     -- Render publications list
     create ["publications.html"] $ do
         route idRoute
@@ -102,16 +116,21 @@ main = hakyll $ do
         compile $ do
             publications <- loadAll "publications/*"
             courses      <- loadAll "courses/*"
+            projects     <- loadAll "projects/*"
             sortedPublications <- take 5 <$> recentFirst publications
             sortedCourses      <- take 5 <$> recentFirst courses
+            sortedProjects     <- recentFirst projects
             publicationItemTpl <- loadBody "templates/publicationitem.html"
             courseItemTpl      <- loadBody "templates/courseitem.html"
+            projectItemTpl     <- loadBody "templates/projectitem.html"
             listPublications <- applyTemplateList publicationItemTpl publicationCtx sortedPublications
             listCourses      <- applyTemplateList courseItemTpl      courseCtx      sortedCourses
+            listProjects     <- applyTemplateList projectItemTpl     projectCtx     sortedProjects
             makeItem listPublications
             makeItem listCourses
-                >>= loadAndApplyTemplate "templates/index.html"   (homeCtx listPublications listCourses)
-                >>= loadAndApplyTemplate "templates/default.html" (homeCtx listPublications listCourses)
+            makeItem listProjects
+                >>= loadAndApplyTemplate "templates/index.html"   (homeCtx listPublications listCourses listProjects)
+                >>= loadAndApplyTemplate "templates/default.html" (homeCtx listPublications listCourses listProjects)
                 >>= relativizeUrls
 
     -- Read templates
@@ -130,6 +149,11 @@ courseCtx =
     defaultContext
 
 --------------------------------------------------------------------------------
+projectCtx :: Context String
+projectCtx =
+    defaultContext
+
+--------------------------------------------------------------------------------
 allPublicationsCtx :: Context String
 allPublicationsCtx =
     constField "title" "Publications" `mappend`
@@ -144,10 +168,11 @@ allCoursesCtx =
     courseCtx
 
 --------------------------------------------------------------------------------
-homeCtx :: String -> String -> Context String
-homeCtx listPublications listCourses =
+homeCtx :: String -> String -> String -> Context String
+homeCtx listPublications listCourses listProjects =
     constField "publications" listPublications `mappend`
     constField "courses" listCourses `mappend`
+    constField "projects" listProjects `mappend`
     constField "title" "Home" `mappend`
     constField "description" "David Guyon's personal page" `mappend`
     defaultContext
