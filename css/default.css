@@ -1,6 +1,6 @@
 @charset 'UTF-8';
-@import url('http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,600,600italic,700');
-@import url('http://fonts.googleapis.com/css?family=Droid+Sans:400,700');
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+@import url(https://fonts.googleapis.com/css?family=Droid+Sans);
 @import url('font-awesome.min.css');
 
 @font-face {
@@ -22,7 +22,7 @@ html {
 body.container {
   width: 100%;
   height: 100%;
-  font-family: "Open Sans", Arial;
+  font-family: 'Roboto', sans-serif;
 }
 
 a {
@@ -79,7 +79,7 @@ nav {
 }
 
 nav a.navbar-brand {
-  font-family: "Existence", Arial;
+  font-family: 'Existence', sans-serif;
   color: #30A63D;
   font-size: 30px;
   margin-top: 2px;
@@ -94,7 +94,7 @@ nav a.navbar-brand :hover {
 nav ul li a {
   color: #CCC;
   font-size: 18px;
-  font-family: "Open Sans", Arial;
+  font-family: "", Arial;
 }
 
 nav ul.navbar-nav > li > a:hover,
@@ -111,7 +111,7 @@ nav ul.navbar-nav .open > a:hover {
  */
 
 section#top {
-  font-family: "Open Sans";
+  font-family: 'Droid Sans', sans-serif;
   padding-top: 8em;
   padding-bottom: 16em;
   background-color: #FFF;
@@ -397,5 +397,5 @@ body > footer {
   font-size: 12px;
   margin-top: 30px;
   text-align: center;
-  font-family: "Open Sans", Arial;
+  font-family: 'Droid Sans', sans-serif;
 }
