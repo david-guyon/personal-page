@@ -4,12 +4,16 @@ module Main where
 
 import  Data.Time.Format (defaultTimeLocale)
 import  Data.Functor ((<$>))
-import  Data.List (isPrefixOf)
+import  Data.List (isPrefixOf, group, groupBy)
 import  Data.Monoid (mappend)
 import  Data.Text (pack, unpack, replace, empty)
+import  Text.Regex (Regex, mkRegex, matchRegex)
+import  System.FilePath.Posix (takeBaseName)
 import  Hakyll
 
 --------------------------------------------------------------------------------
+
+
 main :: IO ()
 main = hakyll $ do
     -- Compress CSS
@@ -88,13 +92,27 @@ main = hakyll $ do
     create ["publications.html"] $ do
         route idRoute
         compile $ do
-            publications <- loadAll "publications/*"
-            sorted <- recentFirst publications
-            itemTpl <- loadBody "templates/publicationitem.html"
-            list <- applyTemplateList itemTpl publicationCtx sorted
-            makeItem list
-                >>= loadAndApplyTemplate "templates/publications.html" allPublicationsCtx
-                >>= loadAndApplyTemplate "templates/default.html"      allPublicationsCtx
+            publications <- fmap groupPublications $ recentFirst =<<
+                                    loadAll "publications/*.md"
+
+            let publicationsCtx =
+                    listField "years"
+                        (
+                            field "year" (return . fst . itemBody) `mappend` 
+                            listFieldWith "publications" publicationCtx
+                            (return . snd . itemBody)
+                        )
+                        (sequence $ fmap (\(y, is) -> makeItem (show y, is)) publications) `mappend` 
+                    constField "title" "Publications" `mappend`
+                    constField "description" "Publications list" `mappend`
+                    defaultContext
+
+            --itemTpl <- loadBody "templates/publicationitem.html"
+            --list <- applyTemplateList itemTpl publicationCtx sorted
+            --makeItem list
+            makeItem ""
+                >>= loadAndApplyTemplate "templates/publications.html" publicationsCtx
+                >>= loadAndApplyTemplate "templates/default.html"      publicationsCtx
                 >>= relativizeUrls
 
     -- Render courses list
@@ -216,3 +234,23 @@ unExternalizeUrlsWith root = withUrls unExt
     unExt x = if root `isPrefixOf` x then unpack $ replace (pack root) empty (pack x) else x
 
 --------------------------------------------------------------------------------
+-- Groups article items by year (reverse order).
+groupPublications :: [Item String] -> [(Int, [Item String])]
+groupPublications = fmap merge . group . fmap tupelise
+    where
+       merge :: [(Int, [Item String])] -> (Int, [Item String])
+       merge gs   = let conv (year, acc) (_, toAcc) = (year, toAcc ++ acc)
+                    in  foldr conv (head gs) (tail gs)
+
+       group ts   = groupBy (\(y, _) (y', _) -> y == y') ts
+       tupelise i = let path = (toFilePath . itemIdentifier) i
+                    in  case (publicationYear . takeBaseName) path of
+                            Just year -> (year, [i])
+                            Nothing   -> error $
+                                            "[ERROR] wrong format: " ++ path
+-- Extracts year from article file name.
+publicationYear :: FilePath -> Maybe Int
+publicationYear s = fmap read $ fmap head $ matchRegex publicationRx s
+
+publicationRx :: Regex
+publicationRx = mkRegex "^([0-9]{4})\\-([0-9]{2})\\-([0-9]{2})\\-(.+)$"

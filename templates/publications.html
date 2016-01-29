@@ -4,8 +4,16 @@
           <h2>$title$</h2>
           <p>Full list of the publications where I participated into the writing as first or second author</p>
         </header>
+        $for(years)$
+        <h2 class="year">$year$</h2>
         <ul class="list-unstyled">
-$body$
+          $for(publications)$
+          <li>
+            <a class="title" href="$url$">$title$</a><br>
+            <span class="authors">$authors$</span>
+          </li>
+          $endfor$
         </ul>
+        $endfor$
       </div>
     </section>
