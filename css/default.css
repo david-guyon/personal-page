@@ -357,6 +357,13 @@ section#publications a.title {
 
 section#publications span.authors {
   font-size: 1em;
+  color: #222;
+  font-style: normal;
+}
+
+section#publications span.conference {
+  font-size: 1em;
+  color: #444;
   font-style: italic;
 }
 
@@ -366,6 +373,12 @@ section#publications span.authors {
 
 section#publication {
   height: 100%;
+}
+
+section#publication article header p#conference {
+  color: #666;
+  font-size: 1.2em;
+  font-style: italic;
 }
 
 section#publication article p#authors,

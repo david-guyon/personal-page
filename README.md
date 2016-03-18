@@ -1,9 +1,12 @@
 #"David Guyon" personal web page
 
 ##Project description
-The aim of this page is to present myself. This page will be displayed at http://david.guyon.me. 
+The aim of this page is to present myself. This page will be displayed at http://david.guyon.me.
 
 ##Last important updates
+###18/03/16
+- Add conference attribute on publications
+
 ###03/06/15
 - Publications page
 - 2 entries in the publications page
@@ -45,7 +48,7 @@ The aim of this page is to present myself. This page will be displayed at http:/
 - French version available
 
 ###30/03/13
-- header finished 
+- header finished
 - "Where am I?" block is add and finished
 - "My Website" bock is add and finished
 - "My Blog" block is add and finished
