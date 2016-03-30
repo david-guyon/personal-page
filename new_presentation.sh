@@ -17,19 +17,27 @@ authors=${REPLY}
 read -r -p "Filename > "
 link="/files/"${REPLY}
 
+read -r -p "Description > "
+description=${REPLY}
+
 read -r -p "Conference > "
 conference=${REPLY}
 
 read -r -p "Conference link > "
 conference-link=${REPLY}
 
+read -r -p "Conference location > "
+location=${REPLY}
+
 cat > "presentations/"$filename <<EOF
 ---
 title: $title
 authors: $authors
 link: $link
+description: $description
 conference: $conference
 conf-link: $conference-link
+location: $location
 ---
 
 EOF
