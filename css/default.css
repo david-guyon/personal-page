@@ -149,6 +149,18 @@ section#last-publications ul li {
 }
 
 /*
+ * Section Last presentations
+ */
+
+section#last-presentations {
+  background-color: #F7F7F7;
+}
+
+section#last-presentations ul li {
+  font-size: 1.25em;
+}
+
+/*
  * Section Last courses
  */
 
@@ -331,14 +343,16 @@ section#contact footer:hover a {
 }
 
 /*
- * Render full list of publications and courses
+ * Render full list of publications, presentations and courses
  */
 
 section#publications,
+section#presentations,
 section#courses {
   height: 100%;
 }
 
+section#presentations li,
 section#courses li {
   font-size: 1.2em;
 }
@@ -395,6 +409,33 @@ section#publication article p#link {
   font-size: 1.2em;
   text-align: center;
 }
+
+/*
+ * Render single presentation
+ */
+
+ section#presentation {
+   height: 100%;
+ }
+
+ section#presentation article header p {
+   color: #666;
+   font-size: 1.3em;
+   text-align: left;
+ }
+
+ section#presentation article > p {
+   color: #666;
+   font-size: 1.2em;
+   text-align: justify;
+   text-indent: 2em;
+ }
+
+ section#presentation article p#link {
+   font-size: 1.2em;
+   text-align: center;
+   text-indent: 0em;
+ }
 
 /*
  * Render single course

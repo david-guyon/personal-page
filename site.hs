@@ -60,6 +60,20 @@ main = hakyll $ do
             >>= loadAndApplyTemplate "templates/default.html" publicationCtx
             >>= relativizeUrls
 
+    -- Render presentations
+    match "presentations/*" $ do
+        route   $ setExtension ".html"
+        compile $ pandocCompiler
+            >>= loadAndApplyTemplate "templates/presentation.html" presentationCtx
+
+            -- RSS feed
+            >>= (externalizeUrls $ feedRoot feedConfiguration)
+            >>= saveSnapshot "content"
+            >>= (unExternalizeUrls $ feedRoot feedConfiguration)
+
+            >>= loadAndApplyTemplate "templates/default.html" presentationCtx
+            >>= relativizeUrls
+
     -- Render courses
     match "courses/*" $ do
         route   $ setExtension ".html"
@@ -98,11 +112,11 @@ main = hakyll $ do
             let publicationsCtx =
                     listField "years"
                         (
-                            field "year" (return . fst . itemBody) `mappend` 
+                            field "year" (return . fst . itemBody) `mappend`
                             listFieldWith "publications" publicationCtx
                             (return . snd . itemBody)
                         )
-                        (sequence $ fmap (\(y, is) -> makeItem (show y, is)) publications) `mappend` 
+                        (sequence $ fmap (\(y, is) -> makeItem (show y, is)) publications) `mappend`
                     constField "title" "Publications" `mappend`
                     constField "description" "Publications list" `mappend`
                     defaultContext
@@ -113,6 +127,19 @@ main = hakyll $ do
             makeItem ""
                 >>= loadAndApplyTemplate "templates/publications.html" publicationsCtx
                 >>= loadAndApplyTemplate "templates/default.html"      publicationsCtx
+                >>= relativizeUrls
+
+    -- Render presentations list
+    create ["presentations.html"] $ do
+        route idRoute
+        compile $ do
+            presentations <- loadAll "presentations/*"
+            sorted <- recentFirst presentations
+            itemTpl <- loadBody "templates/presentationitem.html"
+            list <- applyTemplateList itemTpl presentationCtx sorted
+            makeItem list
+                >>= loadAndApplyTemplate "templates/presentations.html" allPresentationsCtx
+                >>= loadAndApplyTemplate "templates/default.html" allPresentationsCtx
                 >>= relativizeUrls
 
     -- Render courses list
@@ -132,23 +159,28 @@ main = hakyll $ do
     create ["index.html"] $ do
         route idRoute
         compile $ do
-            publications <- loadAll "publications/*"
-            courses      <- loadAll "courses/*"
-            projects     <- loadAll "projects/*"
-            sortedPublications <- take 5 <$> recentFirst publications
-            sortedCourses      <- take 5 <$> recentFirst courses
-            sortedProjects     <- recentFirst projects
-            publicationItemTpl <- loadBody "templates/publicationitem.html"
-            courseItemTpl      <- loadBody "templates/courseitem.html"
-            projectItemTpl     <- loadBody "templates/projectitem.html"
-            listPublications <- applyTemplateList publicationItemTpl publicationCtx sortedPublications
-            listCourses      <- applyTemplateList courseItemTpl      courseCtx      sortedCourses
-            listProjects     <- applyTemplateList projectItemTpl     projectCtx     sortedProjects
+            publications  <- loadAll "publications/*"
+            presentations <- loadAll "presentations/*"
+            courses       <- loadAll "courses/*"
+            projects      <- loadAll "projects/*"
+            sortedPublications  <- take 5 <$> recentFirst publications
+            sortedPresentations <- take 5 <$> recentFirst presentations
+            sortedCourses       <- take 5 <$> recentFirst courses
+            sortedProjects      <- recentFirst projects
+            publicationItemTpl  <- loadBody "templates/publicationitem.html"
+            presentationItemTpl <- loadBody "templates/presentationitem.html"
+            courseItemTpl       <- loadBody "templates/courseitem.html"
+            projectItemTpl      <- loadBody "templates/projectitem.html"
+            listPublications  <- applyTemplateList publicationItemTpl publicationCtx sortedPublications
+            listPresentations <- applyTemplateList presentationItemTpl presentationCtx sortedPresentations
+            listCourses       <- applyTemplateList courseItemTpl      courseCtx      sortedCourses
+            listProjects      <- applyTemplateList projectItemTpl     projectCtx     sortedProjects
             makeItem listPublications
+            makeItem listPresentations
             makeItem listCourses
             makeItem listProjects
-                >>= loadAndApplyTemplate "templates/index.html"   (homeCtx listPublications listCourses listProjects)
-                >>= loadAndApplyTemplate "templates/default.html" (homeCtx listPublications listCourses listProjects)
+                >>= loadAndApplyTemplate "templates/index.html"   (homeCtx listPublications listPresentations listCourses listProjects)
+                >>= loadAndApplyTemplate "templates/default.html" (homeCtx listPublications listPresentations listCourses listProjects)
                 >>= relativizeUrls
 
     -- Read templates
@@ -157,6 +189,12 @@ main = hakyll $ do
 --------------------------------------------------------------------------------
 publicationCtx :: Context String
 publicationCtx =
+    dateFieldWith defaultTimeLocale "date" "%B %Y" `mappend`
+    defaultContext
+
+--------------------------------------------------------------------------------
+presentationCtx :: Context String
+presentationCtx =
     dateFieldWith defaultTimeLocale "date" "%B %Y" `mappend`
     defaultContext
 
@@ -179,6 +217,13 @@ allPublicationsCtx =
     publicationCtx
 
 --------------------------------------------------------------------------------
+allPresentationsCtx :: Context String
+allPresentationsCtx =
+    constField "title" "Presentations" `mappend`
+    constField "description" "Presentations list" `mappend`
+    publicationCtx
+
+--------------------------------------------------------------------------------
 allCoursesCtx :: Context String
 allCoursesCtx =
     constField "title" "Courses" `mappend`
@@ -186,9 +231,10 @@ allCoursesCtx =
     courseCtx
 
 --------------------------------------------------------------------------------
-homeCtx :: String -> String -> String -> Context String
-homeCtx listPublications listCourses listProjects =
+homeCtx :: String -> String -> String -> String -> Context String
+homeCtx listPublications listPresentations listCourses listProjects =
     constField "publications" listPublications `mappend`
+    constField "presentations" listPresentations `mappend`
     constField "courses" listCourses `mappend`
     constField "projects" listProjects `mappend`
     constField "title" "Home" `mappend`
