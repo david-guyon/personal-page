@@ -4,6 +4,11 @@
 The aim of this page is to present myself. This page will be displayed at http://david.guyon.me.
 
 ##Last important updates
+###30/03/16
+- Presentation feature in the global project
+- GreenCom15 presentation
+- Grid'5000 winter school 16 presentation
+
 ###18/03/16
 - Add conference attribute on publications
 
