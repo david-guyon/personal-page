@@ -4,6 +4,9 @@
 The aim of this page is to present myself. This page will be displayed at http://david.guyon.me.
 
 ##Last important updates
+###01/06/16
+- E3-RSD presentation
+
 ###30/03/16
 - Presentation feature in the global project
 - GreenCom15 presentation
