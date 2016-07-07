@@ -14,8 +14,8 @@ filename=$date_pattern$clean_title.md
 read -r -p "Authors > "
 authors=${REPLY}
 
-read -r -p "Filename > "
-link="/files/"${REPLY}
+read -r -p "File location > "
+link=${REPLY}
 
 read -r -p "Description > "
 description=${REPLY}
@@ -24,7 +24,7 @@ read -r -p "Conference > "
 conference=${REPLY}
 
 read -r -p "Conference link > "
-conference-link=${REPLY}
+conference_link=${REPLY}
 
 read -r -p "Conference location > "
 location=${REPLY}
@@ -36,7 +36,7 @@ authors: $authors
 link: $link
 description: $description
 conference: $conference
-conf-link: $conference-link
+conf-link: $conference_link
 location: $location
 ---
 
