@@ -4,6 +4,9 @@
 The aim of this page is to present myself. This page will be displayed at http://david.guyon.me.
 
 ##Last important updates
+###23/09/16
+- Add new course: CSR 2016
+
 ###01/06/16
 - E3-RSD presentation
 
