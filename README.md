@@ -5,7 +5,8 @@ The aim of this page is to present myself. This page will be displayed at http:/
 
 ##Last important updates
 ###23/09/16
-- Add new course: CSR 2016
+- New course: CSR 2016
+- New project: Feu de Camp
 
 ###01/06/16
 - E3-RSD presentation
