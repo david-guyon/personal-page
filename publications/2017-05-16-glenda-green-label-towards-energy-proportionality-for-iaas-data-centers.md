@@ -4,6 +4,6 @@ authors: As cloud services multiply rapidly, so does the computing centers dedic
 abstract: David Guyon, Anne-Cécile Orgerie and Christine Morin
 link: https://hal.archives-ouvertes.fr/hal-01514948
 description: Metric for data centers to attribute ecological labels depending on infrastructure and energy criteria
-conference: E2DC: International Workshop on Energy Efficient Data Centres (e-Energy Workshop), Hong Kong, Hong Kong SAR China
+conference: E2DC, International Workshop on Energy Efficient Data Centres (e-Energy Workshop), Hong Kong, Hong Kong SAR China
 ---
 
