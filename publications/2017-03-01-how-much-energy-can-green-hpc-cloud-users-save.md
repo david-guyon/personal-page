@@ -5,5 +5,7 @@ abstract: Cloud computing has become an attractive and easy-to-use solution for 
 link: https://hal.inria.fr/hal-01439874/
 description: A green cloud system would only be energy efficient if enough users are using it. In this paper we variate the amount of users with different profiles and analyse the resulting energy consumption of a simulated data center
 conference: PDP 2017, 25th Euromicro International Conference on Parallel, Distributed, and Network-Based Processing, Saint Petersbourg, Russia
+conf-link: https://www.pdp2017.org/
+paper-type: short paper
 ---
 

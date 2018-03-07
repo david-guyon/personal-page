@@ -5,5 +5,7 @@ abstract: CO2 emissions related to Cloud computing reach nowadays worrying level
 link: https://hal.inria.fr/hal-01486185
 description: Cloud computing accounting system for CO2 emissions
 conference: SMARTGREENS, International Conference on Smart Cities and Green ICT Systems, Porto, Portugal
+conf-link: http://www.smartgreens.org/?y=2017
+paper-type: short paper
 ---
 

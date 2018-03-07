@@ -26,6 +26,12 @@ description=${REPLY}
 read -r -p "Conference > "
 conference=${REPLY}
 
+read -r -p "Conference link > "
+conference_link=${REPLY}
+
+read -r -p "Paper type > "
+paper_type=${REPLY}
+
 cat > "publications/"$filename <<EOF
 ---
 title: $title
@@ -34,6 +40,8 @@ abstract: $abstract
 link: $link
 description: $description
 conference: $conference
+conf-link: $conference_link
+paper-type: $paper_type
 ---
 
 EOF

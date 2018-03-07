@@ -5,4 +5,6 @@ abstract: Crowdsourcing is an emerging technique that enables to involve humans 
 link: https://hal.archives-ouvertes.fr/hal-01163824
 description: Presentation of what is complex crowdsourcing through a crowdsourcing web application with a workflow engine
 conference: BDA 2014, Gestion de données - principes, technologies et applications, Autrans, France
+conf-link: http://bda2014.imag.fr/
+paper-type: regular paper
 ---

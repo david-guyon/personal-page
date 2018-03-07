@@ -5,4 +5,6 @@ abstract: The advent of multicore and manycore processors, including GPUs, in th
 link: https://hal.inria.fr/hal-01162336
 description: Paper on how to detect bad use/behavior of a CPU thanks to an extension of the hwlock software
 conference: ICCS 2015, International Conference on Computational Science, Reykjavik, Iceland
+conf-link: https://www.iccs-meeting.org/iccs2015/
+paper-type: regular paper
 ---

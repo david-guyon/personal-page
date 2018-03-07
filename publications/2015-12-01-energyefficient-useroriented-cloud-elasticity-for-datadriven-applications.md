@@ -5,4 +5,6 @@ abstract: Nowadays enormous amounts of energy are consumed by Cloud infrastructu
 link: https://hal.inria.fr/hal-01205915
 description: Paper about Green Cloud Computing including the user into the energy optimization
 conference: GreenCom 2015, IEEE International Conference on Green Computing and Communications, Sydney, Australia
+conf-link: http://www.swinflow.org/confs/greencom2015/
+paper-type: regular paper 
 ---

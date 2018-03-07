@@ -5,5 +5,7 @@ abstract: "As cloud services multiply rapidly, so does the computing centers ded
 link: https://hal.archives-ouvertes.fr/hal-01514948
 description: Metric for data centers to attribute ecological labels depending on infrastructure and energy criteria
 conference: E2DC, International Workshop on Energy Efficient Data Centres (e-Energy Workshop), Hong Kong, Hong Kong SAR China
+conf-link: https://e2dc.eu/events.html#event2017
+paper-type: workshop paper 
 ---
 
