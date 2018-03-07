@@ -1,0 +1,15 @@
+name:               site
+version:            0.1.0.0
+build-type:         Simple
+cabal-version:      >= 1.10
+
+executable site
+  main-is:          site.hs
+  build-depends:    base == 4.*
+                  , hakyll == 4.10.*
+                  , time == 1.8.*
+                  , text == 1.2.*
+                  , regex-compat == 0.95.*
+                  , filepath == 1.4.*
+  ghc-options:      -threaded
+  default-language: Haskell2010
