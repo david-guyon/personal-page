@@ -81,8 +81,7 @@ nav {
 nav a.navbar-brand {
   font-family: 'Existence', sans-serif;
   color: #30A63D;
-  font-size: 30px;
-  margin-top: 2px;
+  font-size: 25px;
   font-weight: normal;
 }
 
@@ -91,10 +90,13 @@ nav a.navbar-brand :hover {
   text-decoration: none;
 }
 
+nav ul.navbar-right {
+  padding-right: 20px;
+}
+
 nav ul li a {
   color: #CCC;
-  font-size: 18px;
-  font-family: "", Arial;
+  font-size: 15px;
 }
 
 nav ul.navbar-nav > li > a:hover,
@@ -119,13 +121,13 @@ section#top {
 
 section#top h1 {
   font-weight: normal;
-  font-size: 3.8em;
+  font-size: 3.2em;
   color: #3E3E3E;
   margin-bottom: 25px;
 }
 
 section#top p {
-  font-size: 1.8em;
+  font-size: 1.5em;
   line-height: 1.75em;
   color: #888;
 }
